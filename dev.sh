@@ -10,9 +10,10 @@ FORMULAS=(
   zsh zsh-completions
   lsd z
   nvm
+  commitizen
 )
 CASKS=(
-  raycast zen trae
+  raycast zen trae bruno
   font-jetbrains-mono
   iterm2 amazon-q warp
   shottr obsidian
@@ -98,6 +99,15 @@ brew install yarn pnpm
 
 # brew/fonts
 brew tap homebrew/cask-fonts
+
+# os settings
+defaults write com.apple.screencapture type jpg
+defaults write com.apple.Preview ApplePersistenceIgnoreState YES
+chflags nohidden ~/Library
+defaults write com.apple.finder AppleShowAllFiles YES
+defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
+killall Finder;
 
 # reload profile files.
 {
